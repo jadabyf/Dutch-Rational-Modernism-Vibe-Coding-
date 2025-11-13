@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dutch Rational Modernism · Design Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="A visual study of Dutch Rational Modernism: grid systems, typography, and functional layout inspired by Swiss and Dutch design lineages." />
+  <link rel="stylesheet" href="styles/dutch-rational-modernism.css" />
+</head>
+<body>
+  <header class="drm-header">
+    <div class="drm-header__inner">
+      <a href="#top" class="drm-brand">
+        <span class="drm-brand__mark">NL</span>
+        <span class="drm-brand__text">Dutch Rational Modernism</span>
+      </a>
+      <nav class="drm-nav" aria-label="Primary navigation">
+        <a href="#principles">Principles</a>
+        <a href="#system">System</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="drm-main">
+    <!-- HERO -->
+    <section class="drm-section drm-hero" aria-labelledby="hero-title">
+      <div class="drm-hero__grid">
+        <div class="drm-hero__text">
+          <p class="drm-hero__eyebrow">Design Study · NL / CH Lineage</p>
+          <h1 id="hero-title" class="drm-hero__title">
+            Rational systems.<br />
+            Dutch clarity.
+          </h1>
+          <p class="drm-hero__body">
+            This project explores Dutch Rational Modernism: grid-first layouts,
+            typographic order, and minimal geometry derived from Dutch and Swiss
+            modernist traditions.
+          </p>
+          <div class="drm-hero__meta">
+            <div>
+              <span class="drm-meta__label">Grid</span>
+              <span class="drm-meta__value">12-column · 8pt baseline</span>
+            </div>
+            <div>
+              <span class="drm-meta__label">Type</span>
+              <span class="drm-meta__value">Sans-serif · Asymmetric</span>
+            </div>
+            <div>
+              <span class="drm-meta__label">Palette</span>
+              <span class="drm-meta__value">Black · White · Red · Blue · Yellow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Geometric “poster” built with pure CSS blocks -->
+        <div class="drm-hero__poster" aria-hidden="true">
+          <div class="poster-grid">
+            <div class="poster-block poster-block--red"></div>
+            <div class="poster-block poster-block--white"></div>
+            <div class="poster-block poster-block--blue"></div>
+            <div class="poster-block poster-block--yellow"></div>
+            <div class="poster-block poster-block--black"></div>
+            <div class="poster-block poster-block--outline"></div>
+          </div>
+          <p class="poster-caption">Study 01 · Modular Poster System</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section id="principles" class="drm-section drm-section--strip">
+      <div class="drm-section__header">
+        <h2 class="drm-section__title">Core principles</h2>
+        <p class="drm-section__lead">
+          A rational system: minimal, repeatable, and readable across print and screen.
+        </p>
+      </div>
+
+      <div class="drm-grid drm-grid--4">
+        <article class="drm-card">
+          <h3 class="drm-card__title">Grid Discipline</h3>
+          <p class="drm-card__body">
+            Every element is aligned to a strict grid, creating structure,
+            rhythm, and visual hierarchy.
+          </p>
+        </article>
+
+        <article class="drm-card">
+          <h3 class="drm-card__title">Typographic Order</h3>
+          <p class="drm-card__body">
+            Sans-serif faces, controlled scales, and clear leading support reading before style.
+          </p>
+        </article>
+
+        <article class="drm-card">
+          <h3 class="drm-card__title">Geometric Reduction</h3>
+          <p class="drm-card__body">
+            Rectangles, lines, and blocks of color are reduced to essentials, echoing De Stijl.
+          </p>
+        </article>
+
+        <article class="drm-card">
+          <h3 class="drm-card__title">Function First</h3>
+          <p class="drm-card__body">
+            Composition follows communication: each decision is justified by clarity and function.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SYSTEM -->
+    <section id="system" class="drm-section">
+      <div class="drm-section__header">
+        <h2 class="drm-section__title">System spec</h2>
+        <p class="drm-section__lead">
+          A minimal, reusable system for posters, slides, and web layouts.
+        </p>
+      </div>
+
+      <div class="drm-grid drm-grid--3">
+        <section class="drm-spec">
+          <h3 class="drm-spec__title">Grid</h3>
+          <dl class="drm-spec__list">
+            <div>
+              <dt>Columns</dt>
+              <dd>12</dd>
+            </div>
+            <div>
+              <dt>Baseline</dt>
+              <dd>8&nbsp;px</dd>
+            </div>
+            <div>
+              <dt>Gutter</dt>
+              <dd>24&nbsp;px</dd>
+            </div>
+            <div>
+              <dt>Max width</dt>
+              <dd>1120&nbsp;px</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="drm-spec">
+          <h3 class="drm-spec__title">Typography</h3>
+          <dl class="drm-spec__list">
+            <div>
+              <dt>Primary</dt>
+              <dd>System sans (e.g. Inter / Segoe UI)</dd>
+            </div>
+            <div>
+              <dt>Headlines</dt>
+              <dd>Uppercase, tight tracking</dd>
+            </div>
+            <div>
+              <dt>Body</dt>
+              <dd>Regular · 1.6 line height</dd>
+            </div>
+            <div>
+              <dt>Alignment</dt>
+              <dd>Asymmetric, left-aligned</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="drm-spec">
+          <h3 class="drm-spec__title">Color</h3>
+          <div class="drm-swatches">
+            <div class="drm-swatch drm-swatch--ink">
+              <span>Ink</span><span>#111111</span>
+            </div>
+            <div class="drm-swatch drm-swatch--paper">
+              <span>Paper</span><span>#F5F3F0</span>
+            </div>
+            <div class="drm-swatch drm-swatch--red">
+              <span>Accent Red</span><span>#E32312</span>
+            </div>
+            <div class="drm-swatch drm-swatch--blue">
+              <span>Signal Blue</span><span>#0046FF</span>
+            </div>
+            <div class="drm-swatch drm-swatch--yellow">
+              <span>Highlight Yellow</span><span>#FFD800</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- GALLERY / STUDIES -->
+    <section id="gallery" class="drm-section drm-section--strip">
+      <div class="drm-section__header">
+        <h2 class="drm-section__title">Studies &amp; layouts</h2>
+        <p class="drm-section__lead">
+          Each composition is generated from the same underlying ruleset, then
+          varied in proportion and emphasis.
+        </p>
+      </div>
+
+      <div class="drm-grid drm-grid--3">
+        <article class="drm-poster">
+          <div class="drm-poster__thumb drm-poster__thumb--a"></div>
+          <h3 class="drm-poster__title">Poster 01 · Vertical grid</h3>
+          <p class="drm-poster__body">
+            Strong vertical bands, small typographic block anchored to the lower edge.
+          </p>
+        </article>
+
+        <article class="drm-poster">
+          <div class="drm-poster__thumb drm-poster__thumb--b"></div>
+          <h3 class="drm-poster__title">Poster 02 · Asymmetric field</h3>
+          <p class="drm-poster__body">
+            Asymmetric color fields with a narrow information column on the left.
+          </p>
+        </article>
+
+        <article class="drm-poster">
+          <div class="drm-poster__thumb drm-poster__thumb--c"></div>
+          <h3 class="drm-poster__title">Poster 03 · Modular tiles</h3>
+          <p class="drm-poster__body">
+            A modular tile system that can scale from web sections to physical prints.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="drm-section drm-section--about">
+      <div class="drm-section__header">
+        <h2 class="drm-section__title">About this repository</h2>
+        <p class="drm-section__lead">
+          Built as a coded sketchbook for Dutch Rational Modernism, combining
+          lessons from Bauhaus exercises and Swiss-influenced layout systems.
+        </p>
+      </div>
+
+      <div class="drm-about__grid">
+        <div>
+          <h3 class="drm-about__title">Intent</h3>
+          <p class="drm-about__body">
+            The code is meant as a starting point for experiments: swap
+            typefaces, tweak the grid, or extend the gallery to your own poster
+            series.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="drm-about__title">Usage</h3>
+          <p class="drm-about__body">
+            Clone the repo, adjust the variables in the CSS file, and fork the
+            layout for case studies, portfolios, or design documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="drm-footer">
+    <div class="drm-footer__inner">
+      <p>Dutch Rational Modernism · coded study</p>
+      <p class="drm-footer__meta">Made for experimentation, not perfection.</p>
+    </div>
+  </footer>
+</body>
+</html>
