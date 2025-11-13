@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
         content="A visual study of Dutch Rational Modernism: grid systems, typography, and functional layout inspired by Swiss and Dutch design lineages." />
+  <meta name="theme-color" content="#f5f3f0" />
+  <meta name="color-scheme" content="light" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dutch Rational Modernism · Design Study" />
+  <meta property="og:description" content="Explore grid-first layouts, typographic order, and minimal geometry in Dutch Rational design." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Fonts: Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles/dutch-rational-modernism.css" />
 </head>
 <body>
@@ -19,6 +32,7 @@
         <a href="#principles">Principles</a>
         <a href="#system">System</a>
         <a href="#gallery">Gallery</a>
+        <a href="#case-study">Case Study</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -225,6 +239,51 @@
       </div>
     </section>
 
+    <!-- CASE STUDY -->
+    <section id="case-study" class="drm-section">
+      <div class="drm-section__header">
+        <h2 class="drm-section__title">Case Study</h2>
+        <p class="drm-section__lead">
+          How Dutch rational principles guide real-world design decisions: from concept to execution.
+        </p>
+      </div>
+
+      <div style="max-width: var(--drm-max-width); margin: 0 auto; padding: 0 8px;">
+        <article class="reveal" style="margin-bottom: var(--drm-gap-lg);">
+          <h3 style="margin-bottom: 12px; font-size: 1.1rem;">The Brief</h3>
+          <p>
+            Design a modular poster system for a design conference. The challenge: 
+            create visual variety using a single grid, limited color palette, and strict typography rules. 
+            No decoration—only structure and communication.
+          </p>
+        </article>
+
+        <article class="reveal" style="margin-bottom: var(--drm-gap-lg);">
+          <h3 style="margin-bottom: 12px; font-size: 1.1rem;">The Process</h3>
+          <ol style="margin: 0; padding-left: 20px; line-height: 1.8;">
+            <li><strong>Define the grid:</strong> 12-column grid with 8pt baseline for alignment precision.</li>
+            <li><strong>Choose palette:</strong> Ink, paper, red, blue, yellow—borrowed from De Stijl and Swiss tradition.</li>
+            <li><strong>Set typography:</strong> Single sans-serif, uppercase headings, consistent sizes.</li>
+            <li><strong>Iterate compositions:</strong> Six variations using identical elements in different arrangements.</li>
+            <li><strong>Test across media:</strong> Print posters at actual size, then translate to web.</li>
+          </ol>
+        </article>
+
+        <article class="reveal" style="margin-bottom: var(--drm-gap-lg);">
+          <h3 style="margin-bottom: 12px; font-size: 1.1rem;">The Outcome</h3>
+          <p>
+            A cohesive visual identity that feels both systematic and flexible. Each poster is recognizably part 
+            of a family, yet distinct in hierarchy and emphasis. The system scales from a poster to a business card 
+            without loss of clarity.
+          </p>
+          <p style="margin-bottom: 0;">
+            <strong>Key insight:</strong> Constraint breeds creativity. A strict system forces designers to explore 
+            nuance within boundaries—exactly what Dutch rational modernism demands.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <!-- ABOUT -->
     <section id="about" class="drm-section drm-section--about">
       <div class="drm-section__header">
@@ -252,6 +311,24 @@
             layout for case studies, portfolios, or design documentation.
           </p>
         </div>
+
+        <div>
+          <h3 class="drm-about__title">Design Lineage</h3>
+          <p class="drm-about__body">
+            Inspired by De Stijl (Mondrian), Swiss Style (Müller-Brockmann), 
+            and Dutch Design (Total Design). A fusion of geometric precision 
+            and functional beauty.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="drm-about__title">Resources</h3>
+          <p class="drm-about__body">
+            <a href="#" style="color: var(--drm-blue);">Grid Systems Primer</a> · 
+            <a href="#" style="color: var(--drm-blue);">Swiss Design Documentation</a> · 
+            <a href="#" style="color: var(--drm-blue);">Contact</a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -259,8 +336,43 @@
   <footer class="drm-footer">
     <div class="drm-footer__inner">
       <p>Dutch Rational Modernism · coded study</p>
-      <p class="drm-footer__meta">Made for experimentation, not perfection.</p>
+      <p class="drm-footer__meta">Made for experimentation, not perfection. • Designed with clarity, built with care.</p>
     </div>
   </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    // Intersection Observer for scroll-reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    revealElements.forEach(el => observer.observe(el));
+
+    // Smooth scroll polyfill for older browsers
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#top' || href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+/* ========================================
+   BAUHAUS REVIVAL PORTFOLIO
+   Main CSS Entry Point
+   ======================================== */
+
+/* Design Tokens & Variables */
+@import url('./variables.css');
+
+/* Typography System */
+@import url('./typography.css');
+
+/* Reset & Base */
+@import url('./reset.css');
+@import url('./base.css');
+
+/* Layout */
+@import url('./layout.css');
+
+/* Components */
+@import url('./components/hero.css');
+@import url('./components/sections.css');
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/navigation.css');
+@import url('./components/geometric.css');
+@import url('./components/footer.css');
+@import url('./components/forms.css');
+@import url('./components/color-theory.css');
+
+/* Animations */
+@import url('./animations.css');
+
+/* Print Styles */
+@import url('./print.css');
+
+/* ========================================
+   HERO & SECTION STYLES
+   Moved to dedicated component files:
+   - components/hero.css
+   - components/sections.css
+   ======================================== */
+
+/* Hero styles moved to components/hero.css */
+
+/* Geometric decoration styles moved to components/hero.css */
+
+/* Page header styles moved to components/sections.css */
+
+/* Section header styles moved to components/sections.css */
+
+/* Project and blog section styles moved to components/sections.css */
+
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   Component-specific responsive styles moved to:
+   - Hero responsive: components/hero.css
+   - Section responsive: components/sections.css
+   - Navigation responsive: components/navigation.css
+   - Card responsive: components/cards.css
+   - Form responsive: components/forms.css
+   ======================================== */
